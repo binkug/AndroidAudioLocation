@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!-- 안드로이드에서는 뷰를 xml 파일에 디자인 하는 것이 일반적
+    디자인을 할 때 크기는 필수 요소이고 자바 코드로 동적으로
+    변경하고자 할 때는 반드시 id를 설정 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="노래 제목"
+        android:id="@+id/filename"/>
+    <!--버튼 들을 배치 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="재생"
+            android:id="@+id/btnPlay"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="중지"
+            android:id="@+id/btnStop"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="이전"
+            android:id="@+id/btnPrev"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="다음"
+            android:id="@+id/btnNext"/>
+
+    </LinearLayout>
+    <!--ProgressBar는 진행 상황을 표시해 줄 수 있지만
+    사용자의 이벤트를 받을 수 없고 SeekBar는
+    thumb을 이용해서 사용자의 이벤트를 받을 수 있습니다. -->
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:id="@+id/progress" />
+
+</LinearLayout>
